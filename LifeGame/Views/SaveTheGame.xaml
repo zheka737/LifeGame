@@ -1,0 +1,24 @@
+﻿<Page x:Class="LifeGame.Views.SaveTheGame"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LifeGame.Views"
+        mc:Ignorable="d"
+        Title="Сохранить игру"
+        ShowsNavigationUI="False">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="8*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <ListBox Grid.Row="0" Name="ListOfSaves"/>
+        <TextBox Grid.Row="1" Name="NameOfSaveBox" GotFocus="NameOfSaveBox_GotFocus"/>
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal">
+            <Button  Content="Сохранить" Name="SaveButtom"  Click="SaveButtom_Click" Width="98"></Button>
+            <Button  Content="Удалить" x:Name="DeleteButtom"  Click="DeleteButtom_Click" Width="76" />
+        </StackPanel>
+    </Grid>
+</Page>

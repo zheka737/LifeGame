@@ -1,0 +1,21 @@
+﻿<Page x:Class="LifeGame.Views.ChooseSaveToLoad"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LifeGame.Views"
+        mc:Ignorable="d"
+        Title="Выберите сохранение для загрузки"
+        ShowsNavigationUI="False">
+    <Grid >
+          <Grid.RowDefinitions>
+              <RowDefinition Height="9*"></RowDefinition>
+              <RowDefinition Height="1*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <ListBox Grid.Row="0" Name="ListOfSaves"/>
+        <StackPanel Grid.Row="1" Orientation="Horizontal">
+            <Button Content="Загрузить" Name="Load" Click="Load_Click" Width="101"/>
+            <Button Content="Удалить" Name="Delete" Click="Delete_OnClick_Click" Width="103"/>
+        </StackPanel>
+    </Grid>
+</Page>
